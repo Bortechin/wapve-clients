@@ -1,0 +1,46 @@
+appId: com.wapve.desktop
+productName: Wapve
+copyright: Copyright © Wapve
+asar: true
+afterPack: scripts/after-pack.mjs
+directories:
+  output: release
+  buildResources: build
+files:
+  - dist/**/*
+  - dist-electron/**/*
+  - package.json
+extraResources:
+  - from: src-tauri/icons/icon.ico
+    to: wapve-icon.ico
+  - from: src-tauri/icons/32x32.png
+    to: wapve-tray.png
+protocols:
+  - name: Wapve Protocol
+    schemes:
+      - wapve
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: src-tauri/icons/icon.ico
+  requestedExecutionLevel: asInvoker
+  artifactName: Wapve_${version}_${arch}-setup.${ext}
+nsis:
+  oneClick: false
+  perMachine: false
+  allowElevation: false
+  allowToChangeInstallationDirectory: false
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  menuCategory: Wapve
+  shortcutName: Wapve
+  displayLanguageSelector: true
+  multiLanguageInstaller: true
+  installerLanguages:
+    - tr_TR
+    - en_US
+  deleteAppDataOnUninstall: false
+  runAfterFinish: true
+publish: null

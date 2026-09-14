@@ -1,0 +1,4 @@
+title = "Wapve Clients secret scanning"
+
+[extend]
+useDefault = true

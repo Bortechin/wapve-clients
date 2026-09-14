@@ -1,0 +1,52 @@
+{
+  "name": "@wapve/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prepare:audio": "node scripts/prepare-audio-assets.mjs",
+    "predev": "pnpm prepare:audio",
+    "dev": "next dev --webpack --port 3000",
+    "prebuild": "pnpm prepare:audio",
+    "build": "next build --webpack",
+    "start": "next start --port 3000",
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run app components lib --passWithNoTests",
+    "test:e2e": "playwright test --config playwright.smoke.config.ts",
+    "test:e2e:smoke": "playwright test --config playwright.smoke.config.ts"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "5.9.1",
+    "@radix-ui/react-avatar": "1.2.6",
+    "@radix-ui/react-dialog": "1.1.23",
+    "@radix-ui/react-dropdown-menu": "2.1.24",
+    "@sapphi-red/web-noise-suppressor": "0.4.0",
+    "@simplewebauthn/browser": "13.3.0",
+    "@tanstack/react-query": "5.101.4",
+    "@wapve/contracts": "workspace:*",
+    "@wapve/ui": "workspace:*",
+    "cldr-annotations-full": "48.2.0",
+    "emoji-picker-react": "4.19.1",
+    "lucide-react": "1.32.0",
+    "next": "16.3.1",
+    "qrcode.react": "4.2.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-hook-form": "7.85.0",
+    "socket.io-client": "4.8.3",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.62.1",
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "24.10.1",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "postcss": "8.5.26",
+    "tailwindcss": "4.3.3",
+    "typescript": "5.9.3",
+    "vitest": "4.1.11"
+  },
+  "license": "SEE LICENSE IN ../../LICENSE"
+}

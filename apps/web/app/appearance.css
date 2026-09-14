@@ -1,0 +1,65 @@
+[data-theme='purple'] {
+  --background: #110e19; --sidebar: #171220; --surface: #211a2d; --surface-raised: #2a2138; --hover: #342943;
+  --primary: #a78bfa; --primary-light: #c4b5fd; --text: #f5f0ff; --text-muted: #b6a9cc; --border: rgba(196,181,253,.18);
+}
+[data-theme='blue'] {
+  --background: #080f1d; --sidebar: #0d1728; --surface: #142139; --surface-raised: #1b2c47; --hover: #233957;
+  --primary: #60a5fa; --primary-light: #93c5fd; --text: #eff6ff; --text-muted: #a3b8d6; --border: rgba(147,197,253,.18);
+}
+[data-theme='green'] {
+  --background: #0a1411; --sidebar: #101e19; --surface: #172b23; --surface-raised: #20372d; --hover: #294638;
+  --primary: #4ade80; --primary-light: #86efac; --text: #eefbf3; --text-muted: #a6c5b4; --border: rgba(134,239,172,.18);
+}
+[data-theme='burgundy'] {
+  --background: #180d12; --sidebar: #23121a; --surface: #321c27; --surface-raised: #412535; --hover: #512e41;
+  --primary: #f472b6; --primary-light: #f9a8d4; --text: #fff1f7; --text-muted: #d2aaba; --border: rgba(249,168,212,.18);
+}
+.theme-options { display: grid; grid-template-columns: repeat(auto-fit,minmax(110px,1fr)); gap: 12px; margin: 20px 0; }
+.theme-option { color: var(--text); background: var(--background); border: 2px solid var(--border); border-radius: 12px; padding: 12px; cursor: pointer; }
+.theme-option[aria-pressed='true'] { border-color: var(--primary); outline: 2px solid var(--primary-light); outline-offset: 2px; }
+.theme-option:focus-visible { outline: 3px solid var(--primary-light); outline-offset: 3px; }
+.theme-preview { display: flex; height: 64px; gap: 4px; margin-bottom: 12px; background: var(--surface); border-radius: 6px; padding: 7px; }
+.theme-preview i { background: var(--sidebar); width: 25%; border-radius: 3px; }
+.theme-preview i:nth-child(2) { width: 50%; background: var(--surface-raised); }
+.theme-preview i:last-child { background: var(--primary); }
+.game-sharing-setting { display: flex; align-items: center; gap: 10px; margin-top: 28px; }
+.game-sharing-setting input { width: 18px; height: 18px; accent-color: var(--primary); }
+.game-status { display: inline-flex !important; align-items: center; gap: 4px; min-width: 0; max-width: 100%; color: var(--text-muted); font-size: 11px; line-height: 1.3; }
+.game-status-controller-icon { color: #38bdf8; flex-shrink: 0; width: 13px; height: 13px; }
+.game-status-dot { display: inline-flex !important; align-items: center; flex-shrink: 0; font-size: 9px; line-height: 1; color: var(--text-muted); opacity: 0.7; margin: 0 1px; user-select: none; }
+.game-status-text { display: inline-flex !important; align-items: center; gap: 4px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-top: 0 !important; }
+.game-status-text > * { min-width: 0; }
+.game-status-text span { display: inline !important; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-top: 0 !important; }
+.game-status-text .custom-status-emoji-image { width: 14px; height: 14px; vertical-align: -0.18em; flex-shrink: 0; }
+.game-status-suffix { flex-shrink: 0; white-space: pre; }
+.game-status-full { padding: 10px 16px; flex-wrap: wrap; }
+.game-status-full .game-status-text { overflow: visible; white-space: normal; overflow-wrap: anywhere; }
+.profile-game-activity { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
+.profile-game-heading { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 2px; }
+.profile-game-card { display: flex; align-items: center; gap: 14px; padding: 12px 14px; background: rgba(0, 0, 0, 0.28); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; backdrop-filter: blur(8px); box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22); transition: background 0.15s ease, border-color 0.15s ease; }
+.profile-game-card:hover { background: rgba(0, 0, 0, 0.36); border-color: rgba(255, 255, 255, 0.14); }
+.profile-game-icon-box { width: 52px; height: 52px; min-width: 52px; border-radius: 10px; background: rgba(0, 0, 0, 0.32); border: 1px solid rgba(255, 255, 255, 0.06); display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); }
+.profile-game-icon { width: 44px; height: 44px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)); }
+.profile-game-info { display: flex; flex-direction: column; gap: 4px; min-width: 0; flex: 1; }
+.profile-game-name { font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.25; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.profile-game-time { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #38bdf8; font-variant-numeric: tabular-nums; font-feature-settings: 'tnum'; letter-spacing: 0.01em; }
+.profile-game-controller-icon { color: #38bdf8; flex-shrink: 0; }
+[data-theme='purple'] :is(.profile-game-time, .profile-game-controller-icon, .game-status-controller-icon) { color: #c4b5fd; }
+[data-theme='blue'] :is(.profile-game-time, .profile-game-controller-icon, .game-status-controller-icon) { color: #60a5fa; }
+[data-theme='green'] :is(.profile-game-time, .profile-game-controller-icon, .game-status-controller-icon) { color: #4ade80; }
+[data-theme='burgundy'] :is(.profile-game-time, .profile-game-controller-icon, .game-status-controller-icon) { color: #f472b6; }
+[data-theme='light'] .profile-game-card { background: rgba(0, 0, 0, 0.05); border-color: rgba(0, 0, 0, 0.08); }
+[data-theme='light'] .profile-game-icon-box { background: rgba(0, 0, 0, 0.06); border-color: rgba(0, 0, 0, 0.08); }
+[data-theme='light'] :is(.profile-game-time, .profile-game-controller-icon, .game-status-controller-icon) { color: #0284c7; }
+.command-notice { padding: 10px 14px; background: var(--surface-raised); color: var(--text); border: 1px solid var(--border); border-radius: 8px; font-size: 13px; white-space: pre-wrap; }
+.command-picker > button { width: 100%; display: flex; align-items: center; gap: 9px; border: 0; border-radius: 9px; padding: 7px 9px; background: transparent; color: var(--text); text-align: left; cursor: pointer; }
+.command-picker > button.active, .command-picker > button:hover { background: var(--hover); }
+.command-picker strong { color: var(--text); font-size: 13px; }
+.command-picker small { display: block; color: var(--text-muted); font-size: 12px; margin-top: 2px; }
+/* Fixed-color application surfaces use the same palette as the main workspace. */
+html[data-theme]:not([data-theme='dark']) :is(.settings-dialog,.account-settings-dialog,.server-settings-dialog,.profile-card,.compact-dialog,.context-menu,.dropdown-menu,.mention-picker,.message-composer,.conversation-profile) { background: var(--surface) !important; color: var(--text) !important; border-color: var(--border) !important; }
+html[data-theme]:not([data-theme='dark']) :is(.server-rail,.channel-panel,.member-panel,.channel-list,.settings-nav,.account-settings-nav,.server-sidebar,.channel-sidebar,.members-sidebar,.user-dock) { background: var(--sidebar) !important; }
+html[data-theme]:not([data-theme='dark']) :is(.app-frame,.main-panel,.settings-content,.chat-area,.channel-messages,.social-hub) { background: var(--background) !important; }
+html[data-theme]:not([data-theme='dark']) :is(.app-frame.desktop-client .server-rail,.app-frame.desktop-client .channel-panel,.app-frame.desktop-client .member-panel) { background: var(--sidebar) !important; }
+html[data-theme]:not([data-theme='dark']) :is(input,textarea,select) { color: var(--text); background-color: var(--surface-raised); border-color: var(--border); }
+

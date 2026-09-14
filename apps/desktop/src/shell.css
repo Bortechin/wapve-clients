@@ -1,0 +1,289 @@
+:root {
+  color-scheme: dark;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  color: #f5f7ff;
+  background: #050713;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #050713;
+}
+button {
+  font: inherit;
+}
+
+.boot-shell {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 40%, rgb(25 184 255 / 10%), transparent 24rem), #050713;
+}
+
+.ambient,
+.ambient::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.ambient::before {
+  content: '';
+  background-image: radial-gradient(rgb(110 220 255 / 11%) 1px, transparent 1px);
+  background-size: 31px 31px;
+  opacity: 0.48;
+  mask-image: radial-gradient(ellipse 72% 68% at 50% 45%, #000, transparent 82%);
+}
+.ambient i {
+  position: absolute;
+  width: 26rem;
+  height: 26rem;
+  border-radius: 999px;
+  opacity: 0.13;
+  filter: blur(125px);
+}
+.ambient i:first-child {
+  top: -14rem;
+  left: 8%;
+  background: #28d7ff;
+}
+.ambient i:last-child {
+  right: 4%;
+  bottom: -16rem;
+  background: #086bff;
+}
+
+.boot-stage {
+  position: relative;
+  z-index: 2;
+  width: min(460px, calc(100% - 48px));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.mascot {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  display: grid;
+  place-items: center;
+}
+.mascot::before,
+.mascot::after {
+  content: '';
+  position: absolute;
+  border: 1px solid rgb(76 204 255 / 15%);
+  border-radius: 999px;
+}
+.mascot::before {
+  inset: 20px;
+}
+.mascot::after {
+  inset: -3px;
+  border-style: dashed;
+  opacity: 0.55;
+  animation: orbit 24s linear infinite;
+}
+.mascot span {
+  position: absolute;
+  inset: 56px;
+  border-radius: 999px;
+  background: rgb(40 215 255 / 19%);
+  filter: blur(38px);
+}
+.mascot img {
+  position: relative;
+  z-index: 2;
+  width: 172px;
+  height: 172px;
+  object-fit: contain;
+  filter: drop-shadow(0 26px 25px rgb(0 2 16 / 55%));
+  animation: float 4.8s ease-in-out infinite;
+}
+.eyebrow {
+  margin: 6px 0 0;
+  color: #6edcff;
+  font-size: 10px;
+  font-weight: 760;
+  letter-spacing: 0.14em;
+}
+h1 {
+  margin: 13px 0 8px;
+  font-size: clamp(31px, 4vw, 43px);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+#status-copy {
+  max-width: 390px;
+  margin: 0;
+  color: #96a4c5;
+  font-size: 13px;
+  line-height: 1.55;
+}
+#connection-hint {
+  max-width: 410px;
+  min-height: 42px;
+  margin: 18px 0 0;
+  padding: 12px 15px;
+  border: 1px solid rgb(126 151 215 / 12%);
+  border-radius: 13px;
+  color: #bac5df;
+  background: rgb(9 15 34 / 58%);
+  box-shadow: inset 0 1px rgb(255 255 255 / 3%);
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1.48;
+}
+#retry-status {
+  margin: 10px 0 0;
+  color: #7282a7;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.025em;
+}
+.loader {
+  display: flex;
+  gap: 7px;
+  margin-top: 22px;
+}
+.loader i {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #6edcff;
+  animation: loading 1.15s ease-in-out infinite;
+}
+.loader i:nth-child(2) {
+  animation-delay: 120ms;
+}
+.loader i:nth-child(3) {
+  animation-delay: 240ms;
+}
+#retry {
+  min-height: 44px;
+  margin-top: 17px;
+  padding: 0 18px;
+  border: 1px solid rgb(111 215 255 / 26%);
+  border-radius: 12px;
+  color: white;
+  background: linear-gradient(125deg, #19b8ff, #086bff 54%, #0d8cff);
+  box-shadow: 0 14px 34px rgb(8 107 255 / 25%);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 720;
+}
+#retry:hover {
+  filter: brightness(1.08);
+}
+#retry:focus-visible {
+  outline: 2px solid #6edcff;
+  outline-offset: 3px;
+}
+[hidden] {
+  display: none !important;
+}
+.waves {
+  position: absolute;
+  right: -4%;
+  bottom: -2%;
+  width: 108%;
+  height: 34%;
+  opacity: 0.32;
+  pointer-events: none;
+}
+.waves path {
+  fill: none;
+  stroke: rgb(78 203 255 / 22%);
+  stroke-width: 1.1;
+  stroke-dasharray: 12 17;
+  animation: wave 15s linear infinite;
+}
+.waves path + path {
+  stroke: rgb(57 120 255 / 18%);
+  animation-direction: reverse;
+  animation-duration: 21s;
+}
+body[data-state='offline'] .mascot::after {
+  border-color: rgb(255 189 91 / 18%);
+}
+body[data-state='offline'] .eyebrow {
+  color: #ffbd5b;
+}
+body[data-state='offline'] .boot-shell {
+  background:
+    radial-gradient(circle at 50% 39%, rgb(255 181 72 / 7%), transparent 16rem),
+    radial-gradient(circle at 50% 40%, rgb(25 184 255 / 10%), transparent 28rem), #050713;
+}
+
+@keyframes loading {
+  0%,
+  70%,
+  100% {
+    opacity: 0.28;
+    transform: translateY(0);
+  }
+  35% {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(1deg);
+  }
+}
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes wave {
+  to {
+    stroke-dashoffset: -116;
+  }
+}
+
+@media (max-height: 560px) {
+  .mascot {
+    width: 160px;
+    height: 160px;
+  }
+  .mascot img {
+    width: 125px;
+    height: 125px;
+  }
+  h1 {
+    font-size: 31px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

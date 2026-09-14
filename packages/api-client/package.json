@@ -1,0 +1,24 @@
+{
+  "name": "@wapve/api-client",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint src --max-warnings=0",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@wapve/contracts": "workspace:*"
+  },
+  "devDependencies": {
+    "vitest": "4.1.11"
+  },
+  "license": "SEE LICENSE IN ../../LICENSE"
+}

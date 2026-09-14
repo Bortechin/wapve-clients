@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="wapve_call_default_title">Wapve call</string>
+  <string name="wapve_call_incoming">Incoming Wapve call</string>
+  <string name="wapve_call_active">Wapve call in progress</string>
+  <string name="wapve_call_answer">Answer</string>
+  <string name="wapve_call_decline">Decline</string>
+  <string name="wapve_incoming_calls_channel">Incoming Wapve calls</string>
+  <string name="wapve_incoming_calls_description">Direct and group calls</string>
+  <string name="wapve_active_calls_channel">Ongoing Wapve calls</string>
+  <string name="wapve_active_calls_description">Active microphone and camera calls</string>
+  <string name="wapve_messages_channel">Wapve messages</string>
+  <string name="wapve_messages_description">Messages, mentions and social notifications</string>
+  <string name="wapve_call_bubble_open">Open voice chat controls</string>
+  <string name="wapve_call_bubble_mute">Toggle microphone</string>
+  <string name="wapve_call_bubble_deafen">Toggle call audio</string>
+  <string name="wapve_call_bubble_speaker">Toggle speaker</string>
+  <string name="wapve_call_bubble_leave">Leave voice chat</string>
+</resources>

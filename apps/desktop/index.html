@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <title>Wapve</title>
+  </head>
+  <body>
+    <header class="titlebar" aria-label="Wapve">
+      <div class="brand">
+        <img src="/wapve-icon.png" alt="" draggable="false" />
+        <span>Wapve</span>
+      </div>
+      <div class="drag-region"></div>
+      <nav class="window-controls" aria-label="Window controls">
+        <button id="minimize" type="button" aria-label="Minimize" title="Minimize">
+          <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6.5h8v1H2z" /></svg>
+        </button>
+        <button id="maximize" type="button" aria-label="Maximize" title="Maximize">
+          <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 2h8v8H2zm1 1v6h6V3z" /></svg>
+        </button>
+        <button id="close" class="close" type="button" aria-label="Close" title="Close">
+          <svg viewBox="0 0 12 12" aria-hidden="true">
+            <path
+              d="m2.35 1.65 3.65 3.65 3.65-3.65.7.7L6.7 6l3.65 3.65-.7.7L6 6.7l-3.65 3.65-.7-.7L5.3 6 1.65 2.35z"
+            />
+          </svg>
+        </button>
+      </nav>
+    </header>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

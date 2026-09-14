@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <title>Wapve</title>
+  </head>
+  <body>
+    <main class="boot-shell">
+      <div class="ambient" aria-hidden="true"><i></i><i></i></div>
+      <section class="boot-stage" aria-live="polite">
+        <div class="mascot" aria-hidden="true">
+          <span></span>
+          <img src="/wapve-icon.png" alt="" draggable="false" />
+        </div>
+        <p class="eyebrow">WAPVE DESKTOP</p>
+        <h1 id="status-title">Wapve hazırlanıyor</h1>
+        <p id="status-copy" hidden></p>
+        <blockquote id="connection-hint" hidden></blockquote>
+        <p id="retry-status" hidden></p>
+        <div id="loader" class="loader" aria-hidden="true"><i></i><i></i><i></i></div>
+        <button id="retry" type="button" hidden>Yeniden dene</button>
+      </section>
+      <svg class="waves" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M-40 190C125 80 285 283 466 174S760 62 940 158s278 59 324-10" />
+        <path d="M-50 235c190-65 315 55 485-9s309-96 474-18 276 50 354-10" />
+      </svg>
+    </main>
+    <script type="module" src="/src/shell.ts"></script>
+  </body>
+</html>

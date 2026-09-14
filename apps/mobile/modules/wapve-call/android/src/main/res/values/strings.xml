@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="wapve_call_default_title">Wapve araması</string>
+  <string name="wapve_call_incoming">Wapve araması geliyor</string>
+  <string name="wapve_call_active">Wapve araması devam ediyor</string>
+  <string name="wapve_call_answer">Kabul et</string>
+  <string name="wapve_call_decline">Reddet</string>
+  <string name="wapve_incoming_calls_channel">Gelen Wapve aramaları</string>
+  <string name="wapve_incoming_calls_description">Kişi ve grup aramaları</string>
+  <string name="wapve_active_calls_channel">Devam eden Wapve aramaları</string>
+  <string name="wapve_active_calls_description">Etkin mikrofon ve kamera görüşmeleri</string>
+  <string name="wapve_messages_channel">Wapve mesajları</string>
+  <string name="wapve_messages_description">Mesajlar, bahsetmeler ve sosyal bildirimler</string>
+  <string name="wapve_call_bubble_open">Sesli sohbet kontrollerini aç</string>
+  <string name="wapve_call_bubble_mute">Mikrofonu aç veya kapat</string>
+  <string name="wapve_call_bubble_deafen">Görüşme sesini aç veya kapat</string>
+  <string name="wapve_call_bubble_speaker">Hoparlörü aç veya kapat</string>
+  <string name="wapve_call_bubble_leave">Sesli sohbetten ayrıl</string>
+</resources>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <title>Wapve Ekran Paylaşımı</title>
+  </head>
+  <body>
+    <main class="picker-backdrop">
+      <section class="picker-dialog" role="dialog" aria-modal="true" aria-labelledby="picker-title">
+        <header>
+          <span class="picker-heading">
+            <img src="/wapve-icon.png" alt="" draggable="false" />
+            <span>
+              <strong id="picker-title">Ekranını paylaş</strong>
+              <small id="picker-subtitle">Paylaşmak istediğin uygulamayı veya ekranı seç.</small>
+            </span>
+          </span>
+          <button
+            id="picker-close"
+            class="icon-button"
+            type="button"
+            aria-label="Kapat"
+            title="Kapat"
+          >
+            ×
+          </button>
+        </header>
+
+        <nav class="picker-tabs" role="tablist" aria-label="Paylaşım türü">
+          <button id="windows-tab" class="active" type="button" role="tab" aria-selected="true">
+            <span aria-hidden="true">▣</span><strong>Uygulamalar</strong>
+          </button>
+          <button id="screens-tab" type="button" role="tab" aria-selected="false">
+            <span aria-hidden="true">▤</span><strong>Tüm ekran</strong>
+          </button>
+          <button
+            id="refresh-sources"
+            class="icon-button"
+            type="button"
+            aria-label="Yenile"
+            title="Yenile"
+          >
+            ↻
+          </button>
+        </nav>
+
+        <div id="source-status" class="source-status" role="status">Pencereler hazırlanıyor…</div>
+        <div
+          id="source-grid"
+          class="source-grid"
+          role="listbox"
+          aria-label="Paylaşım kaynakları"
+        ></div>
+
+        <footer>
+          <div class="quality-picker" role="group" aria-label="Yayın kalitesi">
+            <span>Yayın kalitesi</span>
+            <button id="quality-high" class="active" type="button">
+              <strong>1080p</strong><small>60 FPS</small>
+            </button>
+            <button id="quality-balanced" type="button">
+              <strong>720p</strong><small>30 FPS</small>
+            </button>
+          </div>
+          <div class="picker-actions">
+            <button id="picker-cancel" class="secondary" type="button">İptal</button>
+            <button id="picker-share" class="primary" type="button" disabled>Paylaş</button>
+          </div>
+        </footer>
+      </section>
+    </main>
+    <script type="module" src="/src/picker.ts"></script>
+  </body>
+</html>

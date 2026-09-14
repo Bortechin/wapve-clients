@@ -1,0 +1,32 @@
+Wapve Clients — licensing terms
+
+Required Notice: Copyright (c) 2026 Bortechin and the respective contributors.
+Required Notice: Wapve Clients is source-available, not OSI-approved open source.
+Required Notice: Read LICENSE, licenses/PolyForm-Noncommercial-1.0.0.md,
+licenses/OFFICIAL-CLIENT-PERMISSION.md, TRADEMARKS.md and THIRD_PARTY_NOTICES.md.
+
+Except for separately identified third-party material, the original source code
+and documentation in this repository are offered under the unmodified PolyForm
+Noncommercial License 1.0.0, reproduced in
+licenses/PolyForm-Noncommercial-1.0.0.md.
+
+An independent, additional permission for official-client use and contributions
+is provided in licenses/OFFICIAL-CLIENT-PERMISSION.md. That permission does not
+replace or modify the text of the PolyForm license. You may rely on either
+grant to the extent it authorizes your activity.
+
+The source license does not authorize using Wapve code to create or operate
+commercial derivative applications or services outside those grants. Selling
+a derivative app, charging subscriptions for it, monetizing it through ads,
+or incorporating the code into a commercial product requires a separate
+written license from the relevant rights holders, unless an existing grant
+already permits that particular use. Noncommercial status is determined by
+the license terms, not merely by calling a product free.
+
+Wapve artwork and branding have the separate permissions in TRADEMARKS.md.
+Third-party works retain their own licenses; this license does not restrict
+rights independently granted by their authors or rights provided by law.
+
+Commercial licensing inquiries: open a licensing inquiry at
+https://github.com/Bortechin/wapve-clients/issues (do not include confidential data).
+No commercial license is granted merely by submitting an inquiry.

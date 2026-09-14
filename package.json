@@ -1,0 +1,50 @@
+{
+  "name": "wapve-clients",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Wapve web, Windows desktop and Android clients (source-available)",
+  "license": "SEE LICENSE IN LICENSE",
+  "engines": {
+    "node": ">=24.19.0 <25"
+  },
+  "packageManager": "pnpm@10.34.5",
+  "pnpm": {
+    "overrides": {
+      "decode-uri-component@<=0.4.2": "0.5.0",
+      "deepmerge-ts": "8.0.1",
+      "uuid@<11.1.1": "11.1.1"
+    },
+    "patchedDependencies": {
+      "query-string@7.1.3": "patches/query-string@7.1.3.patch"
+    }
+  },
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build && pnpm --filter @wapve/desktop ui:build && pnpm --filter @wapve/desktop electron:build",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "test": "turbo test",
+    "test:e2e": "pnpm --filter @wapve/web test:e2e:smoke",
+    "desktop:dev": "pnpm --filter @wapve/desktop dev",
+    "desktop:check": "pnpm --filter @wapve/desktop check",
+    "desktop:build": "powershell -NoProfile -ExecutionPolicy Bypass -File apps/desktop/scripts/build-release.ps1",
+    "mobile:start": "pnpm --filter @wapve/mobile start",
+    "mobile:android": "pnpm --filter @wapve/mobile android",
+    "mobile:apk": "pnpm --filter @wapve/mobile build:debug",
+    "mobile:release": "pnpm --filter @wapve/mobile build:release",
+    "security:audit": "pnpm audit --prod --audit-level moderate",
+    "quality": "pnpm lint && pnpm typecheck && pnpm test && pnpm build",
+    "release:check": "node scripts/check-publication.mjs"
+  },
+  "devDependencies": {
+    "@babel/runtime": "7.29.7",
+    "@eslint/js": "9.39.2",
+    "eslint": "9.39.2",
+    "eslint-config-prettier": "10.1.8",
+    "globals": "16.4.0",
+    "prettier": "3.6.2",
+    "turbo": "2.10.11",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.41.0"
+  }
+}

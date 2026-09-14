@@ -1,0 +1,13 @@
+packages:
+  - apps/web
+  - apps/desktop
+  - apps/mobile
+  - packages/*
+
+virtualStoreDirMaxLength: 35
+
+allowBuilds:
+  electron: true
+  electron-winstaller: true
+  esbuild: true
+  sharp: true
